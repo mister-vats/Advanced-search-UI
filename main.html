@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AMP</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <div id="cwMain" class="content-wrapper">
+            <div class='tabs'>
+                <!--tab 1-->
+                <input type='radio' id='r1' name='t' checked>
+                <label for='r1'>Cards</label>
+                <div class='content'>
+                    <div class="line-item-container">
+                        <div class="cell">Ankush Vats</div>
+                        <div class="cell">vats@innov8.work</div>
+                        <div class="cell">XXXXXXX</div>
+                        <div class="cell">2 day ago</div>
+                        <div class="cell"> &cross;</div>
+                    </div>
+                    <div class="line-item-container">
+                        <div class="cell">Ankush Vats</div>
+                        <div class="cell">vats@innov8.work</div>
+                        <div class="cell">XXXXXXX</div>
+                        <div class="cell">2 day ago</div>
+                        <div class="cell"> &cross;</div>
+                    </div>
+                    <div class="line-item-container">
+                        <div class="cell">Ankush Vats</div>
+                        <div class="cell">vats@innov8.work</div>
+                        <div class="cell">XXXXXXX</div>
+                        <div class="cell">2 day ago</div>
+                        <div class="cell"> &cross;</div>
+                    </div>
+
+                </div>
+
+                <!--tab 2-->
+                <input type='radio' id='r2' name='t'>
+                <label for='r2'>Credit Info</label>
+                <div class='content'>
+                    <p>Use these tabs according to your application specific needs</p>
+                </div>
+                
+                <!--tab 3-->
+                <input type='radio' id='r3' name='t'>
+                <label for='r3'>Others</label>
+                <div class='content'>
+                        <p>Use these tabs according to your application specific needs</p>
+                </div>
+                
+                <div id='slider'></div>
+            </div>
+                      <!-- "><div"s are required to avoid spaces between display: inline-block elements. https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+        </div>
+        <div class="morph-input">
+            <input id="comboSearch" placeholder="Customer #id/ Company Name/ Door #id"  class="main-search" type="text" class="main">
+            <div id="extendedSearch" class="extended-wrapper hide">
+                <h2 class="title">	M&G Investment Management Limited</h2>
+                <div class="add-card">
+                    <form action="#">
+                        <input type="number" name="cardNumber" id="card_number" placeholder="XXXXXXXX">
+                        <input type="text" name="UserName" id="user_name" placeholder="John Doe">
+                        <input type="email" name="email" id="email" placeholder="john@doe.com">
+                        <button id="addCard" type="submit">&rarrb;</button>
+                    </form>
+                </div>
+                <div class="room">
+                    <h6 style="padding: 0px; margin:0px;">Accessible Rooms</h6>
+                    <h3>2.11</h3>
+                    <h3>2.12</h3>
+                    <h3>2.13</h3>
+                    <h3>2.14</h3>
+                    <h3>2.15</h3>
+                    <h3>2.16</h3>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    <script src="js/main.js"></script>
+</html>

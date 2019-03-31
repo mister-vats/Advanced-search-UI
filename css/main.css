@@ -1,0 +1,241 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: #FF5F6D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    font-family: 'Bree Serif', serif;
+}
+
+.hide{
+    display: none;
+}
+
+.morph-input{
+    background-color: white;
+    position: absolute;
+    height: 60px;
+    top: calc(50vh - 30px);
+    left: 15vw;
+    width: 70vw;
+    
+}
+
+
+.extended-wrapper{
+    color: white;
+    padding: 20px;
+}
+
+.extended-wrapper .title{
+    font-size: 24px;
+    max-width: 260px;
+    text-overflow: ellipsis;
+}
+.room{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+}
+.room h3{
+    display: inline-block;
+    padding: 7px;
+    margin: 0px;
+}
+
+#comboSearch{
+    font-size: 15px;
+    padding: 5px 25px;
+}
+
+.main-search{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border:0px;
+}
+
+.content-wrapper{
+    height: 80vh;
+    position: absolute;
+    top:10vh;
+    width: calc(70vw - 350px);
+    left: calc(15vw + 350px);
+    background-color: white;
+    display: none;
+    opacity: 0;
+    z-index: 100;
+    border: 1px solid #eee;
+}
+
+
+.morphing{
+    animation: morph 0.7s forwards;
+    transition-timing-function: ease-in;
+    
+}
+
+.sliding{
+    display: block;
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.show{
+
+}
+
+/* Standard syntax */
+@keyframes morph {
+    0%	{ height: 60px;  top: calc(50vh - 30px); }
+    50%  {width: 350px; height: 60px;  top: calc(50vh - 30px);}
+    51%  { width: 350px; height: 60px;  top: calc(50vh - 30px);}
+    100% {width:350px; height: 70vh; top: 15vh; background: linear-gradient(to right, #000000, #464646);}
+}
+
+@keyframes slide {
+    0%	{ left:  calc(15vw + 300px)}
+    100% {left: calc(15vw + 350px)}
+}
+
+
+ @keyframes scale-up-hor-left {
+    0% {
+      transform: scaleX(0.4);
+      transform-origin: 0% 0%;
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  
+  .tabs {
+    position: absolute;
+    min-width: 450px;
+    width: 100%;
+  }
+  
+  label, #slider {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    color: #AAA;
+    width: 150px;
+    height: auto;
+    padding: 20px 0px;
+  }
+  
+  label:hover {
+    color: black;
+    cursor: pointer;
+  }
+  
+  .tabs [type=radio] {
+    display: none;   
+  }
+  
+  .content {
+    position: absolute;
+    top: 50px; right: 0; bottom: 0; left: 0;
+    padding: 20px;
+    border-top: 1px solid;
+    border-color: #ccc;
+    display: none;
+  }
+  
+  #slider {
+    background-color: transparent;
+    position: absolute;
+    border-bottom: 3px solid black;
+    margin: 7px 10px;
+    transition: transform 0.5s;
+    width: 130px;
+  }
+  
+  [type=radio],#r1:checked ~ #slider {
+    transform: translate(-450px, 0px);
+  }
+  
+  [type=radio],#r2:checked ~ #slider {
+    transform: translate(-300px, 0px);
+  }
+  
+  [type=radio],#r3:checked ~ #slider {
+    transform: translate(-150px, 0px);
+  }
+  
+  [type=radio]:checked + label {
+    color: black;
+  }
+  
+  [type=radio]:checked + label + .content {
+    display: inline-block;
+  }
+
+  .add-card{
+    width: calc(100% - 40px);
+    height: 150px;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .add-card input{
+      border: 0px;
+      border-bottom: 1px solid white;
+      background: transparent;
+      height: 30px;
+      outline: none;
+      color: white;
+      font-size: 14px;
+  }
+
+  .add-card #user_name{
+      width: calc(100% - 40px);
+  }
+
+  #card_number{
+      float: right;
+  }
+
+  #addCard{
+    background: transparent;
+    border: 0px;
+    height: 40px;
+    width: 40px;
+    float: right;
+    outline: none;
+    color: wheat;
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+    margin-top: 50px;
+  }
+
+  .line-item-container{
+    border-bottom: 1px solid rgb(242, 242, 242);
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    grid-template-areas: 'name email cardno timeago options';
+    grid-template-columns: 25% 35% 17% 15% 8%;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+
+  }
+
+  .show{
+      display: block;
+  }
